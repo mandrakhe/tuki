@@ -1,0 +1,21 @@
+*{
+    background-image: url("../images/fondo-semitono-azul-rosa_53876-144365.webp");    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--fuente);
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height:auto;
+}
