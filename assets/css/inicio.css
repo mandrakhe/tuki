@@ -1,0 +1,5 @@
+@import'reset';
+body{
+    background-image: url('../images/fondo-semitono-azul-rosa_53876-144365.webp');
+    background-size: cover
+}

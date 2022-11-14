@@ -1,5 +1,4 @@
-*{
-    background-image: url("../images/fondo-semitono-azul-rosa_53876-144365.webp");    
+*{  
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -11,6 +10,7 @@ html{
 
 body{
     font-family: var(--fuente);
+    color: var(--color-texto);
 }
 a{
     text-decoration: none;
