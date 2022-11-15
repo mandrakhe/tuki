@@ -1,9 +1,10 @@
 :root{
---fuente:  Arial, Helvetica, sans-serif; 
---normal:15px;
---titulo:30px;
---color-general:rgb(142, 161, 246);
---color-secundario:rgb(51, 46, 176) ;
---color-texto:#444444;
---hover:aliceblue;
+    --normal:16px;
+    --titulo:32px;
+    --encabezado:25px;
+    --hover:aliceblue;
+    --color-texto:#444444;
+    --color-general:rgb(142, 161, 246);
+    --color-secundario:rgb(51, 46, 176) ;
+    --fuente: Arial, Helvetica, sans-serif; 
 }
