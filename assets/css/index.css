@@ -3,6 +3,7 @@
 
 body {
     font-size: 100%;
+    transition: all 1s;
     font-weight: normal;
     background-size: cover;
     color:var(--color-general);
@@ -31,7 +32,7 @@ body {
     color:var(--color-texto);
 }
 .titulo:hover{
-  color: var(--hover);
+    color: var(--hover);
 }
 .ingreso {
     border:3px;
