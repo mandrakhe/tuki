@@ -1,27 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./assets/images/android.png" />
-    <link rel="stylesheet" href="assets/css/index.css">
-    <title>Tuki</title>
-</head>
-<body>  
-    <!-- Formulario de ingreso (sirve tambien como registro) -->
-    <div class="container" >
-        <div class="centro">
-            <div class="ingreso">
-                <div class="titulo">
-                    !Bienvenido¡</div>
-                <form class="formulario"  action="assets/html/inicio.html"  >
-                    <input type="text" name="usuario" placeholder="Usuario" required>
-                    <input type="password" placeholder="Contraseña" name="password" required>      
-                    <button type="submit" title="Ingresar" name="Ingresar" >Ingresar</button>
-                </form>
-            </div>
+    <title>Juego de preguntas</title>
+    <link rel="stylesheet" href="assets/css/quiz.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.all.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="contenedor">
+      <div class="puntaje" id="puntaje"></div>
+      <div class="encabezado">
+        <div class="categoria" id="categoria">
         </div>
+        <div class="numero" id="numero"></div>
+        <div class="pregunta" id="pregunta">
+        </div>
+        <img src="#" class="imagen" id="imagen">
+      </div>
+      <div class="btn" id="btn1" onclick="oprimir_btn(0)"></div>
+      <div class="btn" id="btn2" onclick="oprimir_btn(1)"></div>
+      <div class="btn" id="btn3" onclick="oprimir_btn(2)"></div>
+      <div class="btn" id="btn4" onclick="oprimir_btn(3)"></div>
+      
+      <script src="index.js"></script>
     </div>
-</body>
-</html>
+  
+  </body></html>
