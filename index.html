@@ -1,11 +1,22 @@
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
-    <title>Juego de preguntas</title>
+    <title>Tuki quiz</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/android.png" />
     <link rel="stylesheet" href="assets/css/quiz.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.all.min.js"></script>
   </head>
   
   <body>
+    <!-- navbar -->
+    <div class="header">
+      <header class="header">
+          <nav class="nav">
+              <ul class="ul__nav">
+                  <a href="./assets/html/inicio.html"><img src="./assets/images/alien.ico" alt="Error"  class="img"   ></a>
+              </ul>
+          </nav>
+      </header><hr>
+      <!-- preguntas -->
     <div class="contenedor">
       <div class="puntaje" id="puntaje"></div>
       <div class="encabezado">
@@ -20,8 +31,8 @@
       <div class="btn" id="btn2" onclick="oprimir_btn(1)"></div>
       <div class="btn" id="btn3" onclick="oprimir_btn(2)"></div>
       <div class="btn" id="btn4" onclick="oprimir_btn(3)"></div>
-      
       <script src="index.js"></script>
+      <a href="./assets/html/inicio.html"  class="quiz" >Volver</a>
     </div>
   
   </body></html>
