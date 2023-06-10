@@ -1,5 +1,6 @@
 @import'./reset.css';
 @import'./variables.css';
+
 * {
     transition: all 0.3s;
   }

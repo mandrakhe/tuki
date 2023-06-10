@@ -1,12 +1,14 @@
 let preguntas_aleatorias = true;
-let mostrar_pantalla_juego_términado = true;
+let mostrar_pantalla_juego_terminado = true;
 let reiniciar_puntos_al_reiniciar_el_juego = true;
 
-window.onload = function () {
+window.addEventListener('load', () => {
+
   base_preguntas = readText("./base-preguntas.json");
   interprete_bp = JSON.parse(base_preguntas);
   escogerPreguntaAleatoria();
-};
+
+})
 
 let pregunta;
 let posibles_respuestas;
@@ -36,11 +38,10 @@ function escogerPreguntaAleatoria() {
     }
     if (npreguntas.length == interprete_bp.length) {
       //Aquí es donde el juego se reinicia
-      if (mostrar_pantalla_juego_términado) {
+      if (mostrar_pantalla_juego_terminado) {
         swal.fire({
           title: "Juego finalizado",
-          text:
-            "Puntuación: " + preguntas_correctas + "/" + (preguntas_hechas - 1),
+          text: "Puntuación: " + preguntas_correctas + "/" + (preguntas_hechas - 1),
           icon: "success"
         });
       }
