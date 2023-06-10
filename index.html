@@ -7,12 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./assets/images/android.png" />
     <link rel="stylesheet" href="assets/css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
     <title>Tuki </title>
 </head>
 
 <body>
-    <!-- TODO validar formulario y guardar en el localStore -->
-
     <div class="container">
         <div class="centro">
             <div class="ingreso">
@@ -21,8 +20,10 @@
                 <form id="formularioRegistro" class="formulario">
                     <input type="text" id="usuario" placeholder="Usuario">
                     <input type="password" id="password" placeholder="Contraseña">
-                    <button type="button" id="verPassword">Ver</button>
-                    <button  id="registrar">Registrar</button>
+                    <div class="btn-group">
+                        <button class="ver" type="button" id="verPassword"><i class="ri-eye-line"></i></button>
+                        <button class="registrar" id="registrar">Registrar</button>
+                    </div>
                 </form>
             </div>
         </div>
