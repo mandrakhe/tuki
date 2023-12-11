@@ -1,12 +1,18 @@
-let preguntas_aleatorias = true;
-let mostrar_pantalla_juego_términado = true;
+// variables
+let preguntas_aleatorias = false;
+let mostrar_pantalla_juego_terminado = true;
 let reiniciar_puntos_al_reiniciar_el_juego = true;
 
-window.onload = function () {
-  base_preguntas = readText("./base-preguntas.json");
+// Disparador code
+window.addEventListener('load', () => {
+
+  base_preguntas = readText("../questions/base-preguntas.json");
   interprete_bp = JSON.parse(base_preguntas);
+
+  // Inicializamos el juego
   escogerPreguntaAleatoria();
-};
+
+})
 
 let pregunta;
 let posibles_respuestas;
@@ -34,15 +40,22 @@ function escogerPreguntaAleatoria() {
     if (n >= interprete_bp.length) {
       n = 0;
     }
+
+
     if (npreguntas.length == interprete_bp.length) {
       //Aquí es donde el juego se reinicia
-      if (mostrar_pantalla_juego_términado) {
+      if (mostrar_pantalla_juego_terminado) {
         swal.fire({
-          title: "Juego finalizado",
-          text:
-            "Puntuación: " + preguntas_correctas + "/" + (preguntas_hechas - 1),
+          title: `Juego finalizado ${localStorage.getItem("usuario")} 💩`,
+          text: `El Nigger puntaje: ${preguntas_correctas} / ${preguntas_hechas - 1}`,
           icon: "success"
         });
+
+        setTimeout(() => {
+          
+          console.log(location.href = "../../index.html");
+
+        }, 10000)
       }
       if (reiniciar_puntos_al_reiniciar_el_juego) {
         preguntas_correctas = 0
@@ -66,7 +79,7 @@ function escogerPregunta(n) {
   if (preguntas_hechas > 1) {
     select_id("puntaje").innerHTML = pc + "/" + (preguntas_hechas - 1);
   } else {
-    select_id("puntaje").innerHTML = "";
+    select_id("puntaje").innerHTML = "0/0";
   }
 
   style("imagen").objectFit = pregunta.objectFit;
@@ -80,7 +93,7 @@ function escogerPregunta(n) {
     style("imagen").width = "0px";
     setTimeout(() => {
       select_id("imagen").setAttribute("src", "");
-    }, 500);
+    }, 100);
   }
 }
 
@@ -121,13 +134,11 @@ function oprimir_btn(i) {
   setTimeout(() => {
     reiniciar();
     suspender_botones = false;
-  }, 3000);
+  }, 10);
 }
 
-// let p = prompt("numero")
-
 function reiniciar() {
-  for (const btn of btn_correspondiente) {
+  for (let btn of btn_correspondiente) {
     btn.style.background = "white";
   }
   escogerPreguntaAleatoria();

@@ -1,12 +1,13 @@
 @import'./variables.css';
 @import'./reset.css';
 
+
 body {
     font-size: 100%;
     transition: all 1s;
     font-weight: normal;
     background-size: cover;
-    color:var(--color-general);
+    color: var(--color-general);
     background-image: url('../images/fondo-semitono-azul-rosa_53876-144365.webp');
 }
 
@@ -29,44 +30,89 @@ body {
     font-size: 250%;
     text-align: center;
     margin-bottom: 20px;
-    color:var(--color-texto);
+    color: var(--color-texto);
 }
-.titulo:hover{
+
+.titulo:hover {
     color: var(--hover);
 }
+
 .ingreso {
-    border:3px;
+    border: 3px;
     width: 100%;
-    box-sizing:unset;
+    box-sizing: unset;
     padding: 50px 30px;
-    border-radius:22px;
-    background-color:var(--color-general);
-    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+    border-radius: 22px;
+    background-color: var(--color-general);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
 }
+.ingreso input:focus {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgb(5, 6, 6);
+    font-weight: bolder;
+    text-transform: capitalize;
+
+}
+
 .ingreso input {
-    border:3px;
+    text-align: center;
+    outline: none;
+    border: 3px solid transparent;
     width: 100%;
+    background-color: transparent;
     height: 40px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
     display: block;
     font-size: 110%;
-    border-radius:22px;
     margin-bottom: 10px;
     box-sizing: border-box;
-    color:var(--color-texto);
+    border-bottom: 2px solid var(--color-texto);
+    color: var(--color-texto);
     padding: 5px 5px 5px 10px;
 }
-.ingreso input::placeholder {
-    color:var(--color-texto);
+
+.line-red {
+    border: 2px solid red !important;
 }
-.ingreso button {
-    border:3px;
+
+.ingreso input::placeholder {
+    color: rgb(47, 49, 51);
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn-group{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn-group button:nth-child(2) {
+    flex-grow: 5;
+}
+
+.btn-group button {
+    /*
     width: 100%;
-    height: 40px; 
+    */
+    margin: 0 5px;
+    height: 40px;
     font-size: 110%;
     margin-top: 20px;
-    border-radius:22px;
-    color:var(--color-texto);
+    border-radius: 22px; 
+    flex-grow: 1;
+    color: var(--color-texto);
 }
+
+.registrar, .ver{
+    background-color: var(--color-general);
+    border: 0;
+    outline: 0;
+    letter-spacing: 1px;
+    font-size: medium;
+    font-weight: bolder;
+}
+
 .ingreso button:hover {
-    color:var(--color-secundario);
+    color: var(--color-secundario);
 }

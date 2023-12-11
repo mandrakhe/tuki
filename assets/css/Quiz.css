@@ -1,5 +1,7 @@
 @import'./reset.css';
 @import'./variables.css';
+
+
 * {
     transition: all 0.3s;
   }
@@ -29,6 +31,7 @@
     width: 70%;
     max-width: 600px;
     padding: 10px;
+    border-radius: 10px;
   }
 
   .categoria {
@@ -47,16 +50,22 @@
   }
 
   .btn {
-    background:var(--color-boton);
+    /* background:transparent; */
     width: 60%;
     max-width: 550px;
     padding: 10px;
     margin: 5px;
     cursor: pointer;
+    border: 1px solid var(--color-texto);
+    border-radius: 20px;
+    transform: all .2s ease-in-out ;
   }
 
+
   .btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.060);
+    /* background-color: lightblue; */
+    /* color: var(--color-texto); */
   }
   
   .numero{
@@ -75,14 +84,15 @@
     margin:auto;
     background:0;
     float: center;
-    padding: 8px 12px;
-    border-radius: 22px;
+    padding: 2px 6px;
     color:var(--color-texto);
     font-family:var(--fuente);
-    border: 2px solid var(--color-texto);
+    /* border-radius: 10px; */
+    border-bottom: 2px solid var(--color-texto);
   }
   .quiz:hover{
-    background-color:var(--color-boton);
+    color:lightcyan;
+    border-color: lightcyan;
   }
 
   nav {
